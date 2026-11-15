@@ -43,8 +43,8 @@ def send(sock: socket.socket, data: bytes):
     next_seq = 0
     unacked = {}
 
-    estimated_rtt = 0.5
-    dev_rtt = 0.25
+    estimated_rtt = 0.1
+    dev_rtt = 0.05
     timeout = estimated_rtt + 4 * dev_rtt
 
     alpha = 0.125
